@@ -204,7 +204,7 @@ export function MessageExporter() {
               ))}
             </Select>
           </ListItem>
-          <ListItem
+          {/* <ListItem
             title={Locale.Export.IncludeContext.Title}
             subTitle={Locale.Export.IncludeContext.SubTitle}
           >
@@ -217,7 +217,7 @@ export function MessageExporter() {
                 );
               }}
             ></input>
-          </ListItem>
+          </ListItem> */}
         </List>
         <MessageSelector
           selection={selection}
@@ -484,9 +484,9 @@ export function ImagePreviewer(props: {
           </div>
 
           <div>
-            <div className={styles["main-title"]}>ChatGPT Next Web</div>
+            <div className={styles["main-title"]}>NeolinkGPT Web</div>
             <div className={styles["sub-title"]}>
-              github.com/Yidadaa/ChatGPT-Next-Web
+              Build your own AI assistant.
             </div>
             <div className={styles["icons"]}>
               <ExportAvatar avatar={config.avatar} />

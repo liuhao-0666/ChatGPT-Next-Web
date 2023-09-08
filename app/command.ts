@@ -54,7 +54,7 @@ export function useChatCommand(commands: ChatCommands = {}) {
     const input = extract(userInput);
     const desc = Locale.Chat.Commands;
     return Object.keys(commands)
-      .filter((c) => c.startsWith(input))
+      .filter((c) => c.startsWith(input) && !c.includes("newm"))
       .map((c) => ({
         title: desc[c as keyof ChatCommands],
         content: ChatCommandPrefix + c,
@@ -63,7 +63,8 @@ export function useChatCommand(commands: ChatCommands = {}) {
 
   function match(userInput: string) {
     const command = extract(userInput);
-    const matched = typeof commands[command] === "function";
+    const matched =
+      typeof commands[command] === "function" && command !== "newm";
 
     return {
       matched,
