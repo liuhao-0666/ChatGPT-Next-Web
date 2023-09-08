@@ -40,7 +40,7 @@ export const DEFAULT_CONFIG = {
 
   modelConfig: {
     model: "NeolinkGPT" as ModelType,
-    temperature: 0.5,
+    temperature: 0,
     top_p: 1,
     max_tokens: 2000,
     presence_penalty: 0,
